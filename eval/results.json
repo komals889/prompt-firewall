@@ -1,0 +1,380 @@
+[
+  {
+    "config": "Heuristics only",
+    "overall": {
+      "n": 132,
+      "tp": 18,
+      "fp": 0,
+      "tn": 57,
+      "fn": 57,
+      "precision": 1,
+      "recall": 0.24,
+      "f1": 0.387,
+      "fpr": 0
+    },
+    "bySplit": {
+      "dev": {
+        "n": 32,
+        "tp": 12,
+        "fp": 0,
+        "tn": 14,
+        "fn": 6,
+        "precision": 1,
+        "recall": 0.667,
+        "f1": 0.8,
+        "fpr": 0
+      },
+      "test": {
+        "n": 100,
+        "tp": 6,
+        "fp": 0,
+        "tn": 43,
+        "fn": 51,
+        "precision": 1,
+        "recall": 0.105,
+        "f1": 0.19,
+        "fpr": 0
+      }
+    },
+    "byAttack": {
+      "instruction_override": {
+        "samples": 6,
+        "detected": 0,
+        "recall": 0,
+        "typeNamedCorrectly": 0
+      },
+      "role_change": {
+        "samples": 6,
+        "detected": 0,
+        "recall": 0,
+        "typeNamedCorrectly": 0
+      },
+      "secret_extraction": {
+        "samples": 6,
+        "detected": 0,
+        "recall": 0,
+        "typeNamedCorrectly": 0
+      },
+      "tool_abuse": {
+        "samples": 7,
+        "detected": 3,
+        "recall": 0.429,
+        "typeNamedCorrectly": 2
+      },
+      "credential_theft": {
+        "samples": 7,
+        "detected": 0,
+        "recall": 0,
+        "typeNamedCorrectly": 0
+      },
+      "context_poisoning": {
+        "samples": 6,
+        "detected": 2,
+        "recall": 0.333,
+        "typeNamedCorrectly": 2
+      },
+      "indirect_injection": {
+        "samples": 7,
+        "detected": 1,
+        "recall": 0.143,
+        "typeNamedCorrectly": 1
+      },
+      "encoded_instructions": {
+        "samples": 12,
+        "detected": 0,
+        "recall": 0,
+        "typeNamedCorrectly": 0
+      }
+    },
+    "bySource": {
+      "user": {
+        "n": 29,
+        "recall": 0.417,
+        "fpr": 0
+      },
+      "email": {
+        "n": 27,
+        "recall": 0.2,
+        "fpr": 0
+      },
+      "web": {
+        "n": 18,
+        "recall": 0.1,
+        "fpr": 0
+      },
+      "api": {
+        "n": 14,
+        "recall": 0.231,
+        "fpr": 0
+      },
+      "html": {
+        "n": 27,
+        "recall": 0.25,
+        "fpr": 0
+      },
+      "markdown": {
+        "n": 12,
+        "recall": 0,
+        "fpr": 0
+      },
+      "code": {
+        "n": 5,
+        "recall": 0.667,
+        "fpr": 0
+      }
+    },
+    "llmErrors": 0
+  },
+  {
+    "config": "+ Decoder",
+    "overall": {
+      "n": 132,
+      "tp": 32,
+      "fp": 0,
+      "tn": 57,
+      "fn": 43,
+      "precision": 1,
+      "recall": 0.427,
+      "f1": 0.598,
+      "fpr": 0
+    },
+    "bySplit": {
+      "dev": {
+        "n": 32,
+        "tp": 14,
+        "fp": 0,
+        "tn": 14,
+        "fn": 4,
+        "precision": 1,
+        "recall": 0.778,
+        "f1": 0.875,
+        "fpr": 0
+      },
+      "test": {
+        "n": 100,
+        "tp": 18,
+        "fp": 0,
+        "tn": 43,
+        "fn": 39,
+        "precision": 1,
+        "recall": 0.316,
+        "f1": 0.48,
+        "fpr": 0
+      }
+    },
+    "byAttack": {
+      "instruction_override": {
+        "samples": 6,
+        "detected": 0,
+        "recall": 0,
+        "typeNamedCorrectly": 0
+      },
+      "role_change": {
+        "samples": 6,
+        "detected": 0,
+        "recall": 0,
+        "typeNamedCorrectly": 0
+      },
+      "secret_extraction": {
+        "samples": 6,
+        "detected": 0,
+        "recall": 0,
+        "typeNamedCorrectly": 0
+      },
+      "tool_abuse": {
+        "samples": 7,
+        "detected": 3,
+        "recall": 0.429,
+        "typeNamedCorrectly": 2
+      },
+      "credential_theft": {
+        "samples": 7,
+        "detected": 0,
+        "recall": 0,
+        "typeNamedCorrectly": 0
+      },
+      "context_poisoning": {
+        "samples": 6,
+        "detected": 2,
+        "recall": 0.333,
+        "typeNamedCorrectly": 2
+      },
+      "indirect_injection": {
+        "samples": 7,
+        "detected": 1,
+        "recall": 0.143,
+        "typeNamedCorrectly": 1
+      },
+      "encoded_instructions": {
+        "samples": 12,
+        "detected": 12,
+        "recall": 1,
+        "typeNamedCorrectly": 12
+      }
+    },
+    "bySource": {
+      "user": {
+        "n": 29,
+        "recall": 0.667,
+        "fpr": 0
+      },
+      "email": {
+        "n": 27,
+        "recall": 0.2,
+        "fpr": 0
+      },
+      "web": {
+        "n": 18,
+        "recall": 0.9,
+        "fpr": 0
+      },
+      "api": {
+        "n": 14,
+        "recall": 0.462,
+        "fpr": 0
+      },
+      "html": {
+        "n": 27,
+        "recall": 0.25,
+        "fpr": 0
+      },
+      "markdown": {
+        "n": 12,
+        "recall": 0,
+        "fpr": 0
+      },
+      "code": {
+        "n": 5,
+        "recall": 0.667,
+        "fpr": 0
+      }
+    },
+    "llmErrors": 0
+  },
+  {
+    "config": "+ LLM judge",
+    "overall": {
+      "n": 132,
+      "tp": 75,
+      "fp": 0,
+      "tn": 57,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "fpr": 0
+    },
+    "bySplit": {
+      "dev": {
+        "n": 32,
+        "tp": 18,
+        "fp": 0,
+        "tn": 14,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1,
+        "fpr": 0
+      },
+      "test": {
+        "n": 100,
+        "tp": 57,
+        "fp": 0,
+        "tn": 43,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1,
+        "fpr": 0
+      }
+    },
+    "byAttack": {
+      "instruction_override": {
+        "samples": 6,
+        "detected": 6,
+        "recall": 1,
+        "typeNamedCorrectly": 6
+      },
+      "role_change": {
+        "samples": 6,
+        "detected": 6,
+        "recall": 1,
+        "typeNamedCorrectly": 6
+      },
+      "secret_extraction": {
+        "samples": 6,
+        "detected": 6,
+        "recall": 1,
+        "typeNamedCorrectly": 6
+      },
+      "tool_abuse": {
+        "samples": 7,
+        "detected": 7,
+        "recall": 1,
+        "typeNamedCorrectly": 4
+      },
+      "credential_theft": {
+        "samples": 7,
+        "detected": 7,
+        "recall": 1,
+        "typeNamedCorrectly": 7
+      },
+      "context_poisoning": {
+        "samples": 6,
+        "detected": 6,
+        "recall": 1,
+        "typeNamedCorrectly": 6
+      },
+      "indirect_injection": {
+        "samples": 7,
+        "detected": 7,
+        "recall": 1,
+        "typeNamedCorrectly": 5
+      },
+      "encoded_instructions": {
+        "samples": 12,
+        "detected": 12,
+        "recall": 1,
+        "typeNamedCorrectly": 12
+      }
+    },
+    "bySource": {
+      "user": {
+        "n": 29,
+        "recall": 1,
+        "fpr": 0
+      },
+      "email": {
+        "n": 27,
+        "recall": 1,
+        "fpr": 0
+      },
+      "web": {
+        "n": 18,
+        "recall": 1,
+        "fpr": 0
+      },
+      "api": {
+        "n": 14,
+        "recall": 1,
+        "fpr": 0
+      },
+      "html": {
+        "n": 27,
+        "recall": 1,
+        "fpr": 0
+      },
+      "markdown": {
+        "n": 12,
+        "recall": 1,
+        "fpr": 0
+      },
+      "code": {
+        "n": 5,
+        "recall": 1,
+        "fpr": 0
+      }
+    },
+    "llmErrors": 0
+  }
+]
